@@ -9,7 +9,7 @@ const TYPES = [
 ]
 
 const SORT_OPTIONS = [
-  { value: 'id',   label: 'Número Pokedéx'   },
+  { value: 'id',   label: 'Número Pokédex'   },
   { value: 'name', label: 'Nome'   },
   { value: 'hp',   label: 'HP'     },
   { value: 'atk',  label: 'Ataque' },

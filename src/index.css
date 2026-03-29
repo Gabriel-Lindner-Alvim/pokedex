@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Nunito:wght@400;700;800&display=swap');
+
+:root {
+  /* Paleta GBA — verde LCD escuro */
+  --bg-primary:    #1a2a1a;
+  --bg-deep:       #0d1a0d;
+  --bg-card:       #0d1a0d;
+  --bg-card-hover: #152015;
+  --bg-navbar:     #0d1a0d;
+  --bg-surface:    #152015;
+
+  --accent:        #78c878;
+  --accent-dim:    rgba(120, 200, 120, 0.15);
+  --accent-glow:   rgba(120, 200, 120, 0.08);
+
+  --text-primary:  #a8d8a8;
+  --text-muted:    #4a7c4a;
+  --text-dim:      #2a4a2a;
+
+  --border:        rgba(74, 124, 74, 0.3);
+  --border-strong: #3a5a3a;
+  --border-accent: #4a7c4a;
+
+  --font-pixel: 'Press Start 2P', monospace;
+  --font-terminal: 'VT323', monospace;
+  --font-body:  'Nunito', sans-serif;
+
+  --radius:      6px;
+  --radius-sm:   4px;
+  --radius-pill: 999px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.06) 2px,
+    rgba(0, 0, 0, 0.06) 4px
+  );
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* ── Tipos — fundo escuro + cor vibrante (estilo GBA) ── */
+.type-fire     { background: #8b3a0f; color: #ffaa66; border: 1px solid #aa4a1f; }
+.type-water    { background: #0f3a6b; color: #66aaff; border: 1px solid #1f4a8b; }
+.type-grass    { background: #1a4a1a; color: #66cc66; border: 1px solid #2a6a2a; }
+.type-electric { background: #5a4a00; color: #ffdd00; border: 1px solid #8a7a00; }
+.type-psychic  { background: #5a1a4a; color: #ff88cc; border: 1px solid #8a2a6a; }
+.type-ice      { background: #0a3a4a; color: #88ddff; border: 1px solid #1a5a6a; }
+.type-dragon   { background: #0f2a5a; color: #6699ff; border: 1px solid #1f3a8b; }
+.type-dark     { background: #2a2a2a; color: #aaaaaa; border: 1px solid #4a4a4a; }
+.type-fairy    { background: #5a1a3a; color: #ffaadd; border: 1px solid #8a2a5a; }
+.type-normal   { background: #3a3a3a; color: #cccccc; border: 1px solid #5a5a5a; }
+.type-fighting { background: #6a2a0a; color: #ff8844; border: 1px solid #8a3a1a; }
+.type-poison   { background: #3a1a5a; color: #cc88ff; border: 1px solid #5a2a8a; }
+.type-ground   { background: #4a3a00; color: #ddbb44; border: 1px solid #6a5a00; }
+.type-flying   { background: #0a2a5a; color: #88ccff; border: 1px solid #1a4a8a; }
+.type-bug      { background: #2a4a0a; color: #99cc44; border: 1px solid #3a6a1a; }
+.type-rock     { background: #3a2a00; color: #ccaa44; border: 1px solid #5a4a00; }
+.type-ghost    { background: #2a1a4a; color: #aa88ff; border: 1px solid #4a2a8a; }
+.type-steel    { background: #2a3a4a; color: #aaccdd; border: 1px solid #3a5a6a; }

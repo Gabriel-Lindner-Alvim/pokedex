@@ -1,0 +1,104 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.typeScroll {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  /* padding nas laterais protege o outline do primeiro e último item */
+  padding: 5px 6px 12px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+}
+.typeScroll::-webkit-scrollbar {
+  height: 3px;
+}
+
+.typeScroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.typeScroll::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+.pill {
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 6px 14px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: capitalize;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.15s, opacity 0.15s;
+  font-family: var(--font-body);
+  flex-shrink: 0;
+}
+
+.pillActive {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.pillInactive {
+  opacity: 0.6;
+}
+
+.pillInactive:hover {
+  opacity: 1;
+}
+
+.pill:first-child {
+  background: var(--accent);
+  color: #fff;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.select {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 13px;
+  cursor: pointer;
+  outline: none;
+  min-width: 180px;
+}
+
+.select:focus {
+  border-color: var(--accent);
+}
+.dirBtn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  color: var(--accent);
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, border-color 0.15s;
+  flex-shrink: 0;
+}
+
+.dirBtn:hover {
+  background: var(--bg-surface);
+  border-color: var(--accent);
+}

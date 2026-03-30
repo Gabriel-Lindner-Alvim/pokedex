@@ -7,6 +7,7 @@ import FilterPanel from '../../components/FilterPanel/FilterPanel'
 import Pagination from '../../components/Pagination/Pagination'
 import styles from './Home.module.css'
 import PokemonModal from '../../components/PokemonModal/PokemonModal'
+import PageSkeleton from '../../components/Skeleton/Skeleton'
 
 export default function Home() {
   const [searchTerm, setSearchTerm]     = useState('')
@@ -54,7 +55,11 @@ export default function Home() {
   const start = (currentPage - 1) * pageSize
   const paginatedPokemons = filteredPokemons.slice(start, start + pageSize)
 
-  if (isLoading) return <LoadingScreen />
+  if (isLoading) return (
+  <main className={styles.main}>
+    <PageSkeleton cardCount={50} />
+  </main>
+)
   if (isError)   return <ErrorScreen />
 
   return (
@@ -120,15 +125,6 @@ export default function Home() {
         />
       )}
     </main>
-  )
-}
-
-function LoadingScreen() {
-  return (
-    <div className={styles.centered}>
-      <div className={styles.pokeball} />
-      <p className={styles.loadingText}>Carregando pokémons...</p>
-    </div>
   )
 }
 

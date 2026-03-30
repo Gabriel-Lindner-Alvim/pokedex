@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { getPokemonList, getPokemonDetail } from '../services/pokeApi';
 
-export function usePokemonList(limit = 151) {
+export function usePokemonList(limit = 1025) {
   return useQuery({
     queryKey: ['pokemonList', limit],
     queryFn: async () => {

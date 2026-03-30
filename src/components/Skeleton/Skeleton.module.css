@@ -1,0 +1,75 @@
+/* ── Shimmer animation ── */
+@keyframes shimmer {
+  0%   { background-position: -600px 0; }
+  100% { background-position:  600px 0; }
+}
+
+.block {
+  background: linear-gradient(
+    90deg,
+    var(--bg-surface)   25%,
+    var(--border-strong) 50%,
+    var(--bg-surface)   75%
+  );
+  background-size: 1200px 100%;
+  animation: shimmer 1.6s infinite linear;
+  flex-shrink: 0;
+}
+
+/* ── SearchBar skeleton ── */
+.searchBar {
+  margin-bottom: 16px;
+}
+
+/* ── FilterPanel skeleton ── */
+.filterPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.pills {
+  display: flex;
+  gap: 8px;
+  overflow: hidden;
+  padding: 4px 2px;
+}
+
+/* ── Meta row ── */
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.sizeBtns {
+  display: flex;
+  gap: 6px;
+}
+
+/* ── Grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+/* ── Card skeleton ── */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.cardInner {
+  padding: 0 12px 12px;
+}
+
+.typeBadges {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}

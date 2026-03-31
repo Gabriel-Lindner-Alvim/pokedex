@@ -1,6 +1,6 @@
 # Pokédex App
 
-Projeto frontend desenvolvido como exercício prático de React e consumo de APIs REST, utilizando a [PokéAPI](https://pokeapi.co) como fonte de dados. O visual foi inspirado na estética retrô do **Game Boy Advance**, com paleta verde LCD, fontes pixel art e scanlines.
+Projeto frontend desenvolvido como exercício prático de React e consumo de APIs REST, utilizando a [PokéAPI](https://pokeapi.co) como fonte de dados. O visual foi inspirado na estética retrô do **Game Boy**, com paleta verde LCD, fontes pixel art e scanlines.
 
 ---
 

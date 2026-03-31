@@ -30,29 +30,6 @@
   flex-shrink: 0;
 }
 
-.closeBtn {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-sm);
-  color: var(--text-muted);
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: color 0.15s, border-color 0.15s;
-  z-index: 10;
-}
-
-.closeBtn:hover {
-  color: var(--accent);
-  border-color: var(--accent);
-}
-
 .header {
   display: flex;
   align-items: center;
@@ -221,4 +198,63 @@
 
 @keyframes spin {
   to { transform: rotate(360deg); }
+}
+
+.topActions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 10;
+}
+
+.shinyBtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  color: var(--text-muted);
+  padding: 0 8px;
+  height: 30px;
+  cursor: pointer;
+  font-family: var(--font-pixel);
+  font-size: 6px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.shinyBtn:hover {
+  border-color: #f8d030;
+  color: #f8d030;
+}
+
+.shinyActive {
+  background: rgba(248, 208, 48, 0.12);
+  border-color: #f8d030;
+  color: #f8d030;
+  box-shadow: 0 0 8px rgba(248, 208, 48, 0.25);
+}
+
+.closeBtn {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s, border-color 0.15s;
+  flex-shrink: 0;
+}
+
+.closeBtn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
 }

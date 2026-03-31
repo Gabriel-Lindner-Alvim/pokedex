@@ -41,9 +41,15 @@ function SkeletonFilterPanel() {
 // Skeleton de um card individual
 function SkeletonCard() {
   return (
-    <div className={styles.card}>
+    <div className={styles.card} style={{ position: 'relative' }}>
       {/* barra de tipo no topo */}
       <SkeletonBlock height="4px" radius="0" />
+
+      {/* shiny toggle — canto superior direito, fora do fluxo */}
+      <div style={{ position: 'absolute', top: '10px', right: '8px' }}>
+        <SkeletonBlock width="22px" height="22px" radius="4px" />
+      </div>
+
       <div className={styles.cardInner}>
         {/* número */}
         <SkeletonBlock width="40px" height="10px" radius="3px" style={{ margin: '0 auto 10px' }} />

@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { getPokemonList, getPokemonDetail } from '../services/pokeApi';
+import { getPokemonList, getPokemonDetail, getPokemonSpecies } from '../services/pokeApi';
 
 export function usePokemonList(limit = 1025) {
   return useQuery({
@@ -22,4 +22,13 @@ export function usePokemonDetail(nameOrId) {
     queryFn: () => getPokemonDetail(nameOrId),
     enabled: !!nameOrId,
   });
+}
+
+export function usePokemonSpecies(nameOrId) {
+  return useQuery({
+    queryKey: ['species', nameOrId],
+    queryFn: () => getPokemonSpecies(nameOrId),
+    enabled: !!nameOrId,
+    staleTime: 1000 * 60 * 10,
+  })
 }

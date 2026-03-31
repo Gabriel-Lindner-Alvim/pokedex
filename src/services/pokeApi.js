@@ -27,3 +27,7 @@ export const getAllTypes = async () => {
   const { data } = await api.get('/type');
   return data;
 };
+
+// Busca a existênncia de mais de uma forma para o pokemon
+export const getPokemonSpecies = (nameOrId) =>
+  api.get(`/pokemon-species/${nameOrId}`).then(r => r.data)

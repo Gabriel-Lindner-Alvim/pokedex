@@ -46,6 +46,15 @@ export default function PokemonModal({ name, onClose }) {
     setActiveForm(name)
   }, [name])
 
+    // Preload both sprites so toggling shiny is instant
+  useEffect(() => {
+    if (!pokemon) return
+    const normalSrc = pokemon.sprites.other['official-artwork'].front_default ?? pokemon.sprites.front_default
+    const shinySrc  = pokemon.sprites.other['official-artwork'].front_shiny  ?? pokemon.sprites.front_shiny
+    if (normalSrc) { const img = new Image(); img.src = normalSrc }
+    if (shinySrc)  { const img = new Image(); img.src = shinySrc  }
+  }, [pokemon])
+
   // Quando formIndex muda, atualiza qual forma está ativa
   useEffect(() => {
     if (varieties.length > 0) {

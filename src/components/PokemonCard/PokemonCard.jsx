@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Sparkles } from 'lucide-react'
 import { getTypeColor } from '../../utils/typeColors'
@@ -23,6 +23,13 @@ export default function PokemonCard({ pokemon, onClick }) {
   const borderGradient = types[1]
     ? `linear-gradient(90deg, ${primaryColor} 50%, ${secondaryColor} 50%)`
     : primaryColor
+
+  useEffect(() => {
+    const normalSrc = pokemon.sprites.other['official-artwork'].front_default ?? pokemon.sprites.front_default
+    const shinySrc  = pokemon.sprites.other['official-artwork'].front_shiny  ?? pokemon.sprites.front_shiny
+    if (normalSrc) { const img = new Image(); img.src = normalSrc }
+    if (shinySrc)  { const img = new Image(); img.src = shinySrc  }
+  }, [pokemon])
 
   const toggleShiny = (e) => {
     e.stopPropagation() // impede abrir o modal
